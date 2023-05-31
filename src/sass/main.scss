@@ -37,3 +37,11 @@ body {
         color:$hoverColor;
     }
     }
+
+.mensaje {
+    color:$hoverColor;
+    font-family: "Garet-heavy";
+    font-size: 140%;
+    padding: 5%;
+    text-decoration: underline 4px $textColor;
+}
