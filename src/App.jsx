@@ -1,11 +1,12 @@
 
 import './sass/main.scss'
+import NavBar from './components/NavBar/NavBar'
 
 function App() {
 
 
   return (
-    <div>hola mundo</div>
+    <NavBar />
   )
 }
 

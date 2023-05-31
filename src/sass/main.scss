@@ -1,7 +1,25 @@
 
+@import "_fonts";
+
 body {
     background-color: rgb(26, 20, 35);
 }
-div{
-    color: aqua;
+
+.navbar{
+    .nav{
+        .nav-link {
+            color:rgb(183, 93, 105);
+            font-size: 130%;
+            font-family: "Garet";
+            transition: 1s;
+
+            &:hover{
+                color:rgb(237, 223, 225);
+                font-family: "Garet-heavy";
+                transform: scale(1.2,1.2);
+                
+                
+            }
+        }
+    }
 }
