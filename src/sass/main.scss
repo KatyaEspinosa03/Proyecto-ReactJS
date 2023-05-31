@@ -7,8 +7,10 @@ body {
 }
 
 .navbar{
-    border-top: 1px solid $hoverColor;
-    border-bottom: solid $hoverColor 1px ;
+    border-top: solid $hoverColor 2px ;
+    border-bottom: solid $hoverColor 2px ;
+
+
     .nav{
         .nav-link {
             color: $textColor;

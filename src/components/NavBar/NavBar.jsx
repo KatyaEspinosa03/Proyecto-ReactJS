@@ -1,6 +1,7 @@
 import React from 'react';
 import CarWidget from '../CarWidget/CarWidget'
 
+
 const NavBar = () => {
 
     return (
