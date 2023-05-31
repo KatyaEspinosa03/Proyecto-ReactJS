@@ -1,25 +1,37 @@
 
 @import "_fonts";
+@import "_colors";
 
 body {
-    background-color: rgb(26, 20, 35);
+    background-color: $backgroundColor;
 }
 
 .navbar{
+    border-top: 1px solid $hoverColor;
+    border-bottom: solid $hoverColor 1px ;
     .nav{
         .nav-link {
-            color:rgb(183, 93, 105);
+            color: $textColor;
             font-size: 130%;
             font-family: "Garet";
             transition: 1s;
 
             &:hover{
-                color:rgb(237, 223, 225);
+                color: $hoverColor;
                 font-family: "Garet-heavy";
                 transform: scale(1.2,1.2);
-                
-                
             }
         }
+    
     }
 }
+.car{
+    color: $textColor;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+
+    &:hover {
+        color:$hoverColor;
+    }
+    }
