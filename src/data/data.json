@@ -32,6 +32,73 @@
         "artistName": "Miley Cyrus",
         "image": "",
         "price": "$890"
+    },
+
+    {
+        "albumName": "Fearless (Taylor's version) Triple Vinil",
+        "artistName": "Taylor Swift",
+        "image": "",
+        "price": "$1,000"
+    },
+    {
+        "albumName": "Midnights",
+        "artistName": "Taylor Swift",
+        "image": "",
+        "price": "$800"
+    },
+    {
+        "albumName": "Happier than Ever",
+        "artistName": "Billie Eilish",
+        "image": "",
+        "price": "$947"
+    },
+
+    {
+        "albumName": "Chromatica Vinil Trifold",
+        "artistName": "Lady Gaga",
+        "image": "",
+        "price": "$,000"
+    },
+
+    {
+        "albumName": "Dawn of Chromatica",
+        "artistName": "Lady Gaga",
+        "image": "",
+        "price": "$850"
+    },
+
+    {
+        "albumName": "Did You Know That There's a Tunnerl Under Ocean Boulvard",
+        "artistName": "Lana del Rey",
+        "image": "",
+        "price": "$800"
+    },
+
+    {
+        "albumName": "Born Pink",
+        "artistName": "Black Pink",
+        "image": "",
+        "price": "$700"
+    },
+
+    {
+        "albumName": "Fine Line",
+        "artistName": "Harry Styles",
+        "image": "",
+        "price": "$1,173"
+    },
+    {
+        "albumName": "Ultraviolence",
+        "artistName": "Lana del Rey",
+        "image": "",
+        "price": "$1,123"
+    },
+
+    {
+        "albumName": "Renaissance",
+        "artistName": "Beyoncé",
+        "image": "",
+        "price": "$1,427"
     }
 ]
 
