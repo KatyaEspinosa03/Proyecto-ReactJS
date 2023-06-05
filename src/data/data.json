@@ -1,0 +1,37 @@
+[
+    {
+        "albumName": "Random Access Memories",
+        "artistName": "Daft Punk",
+        "image": "",
+        "price": "$1,290"
+    },
+
+    {
+        "albumName": "Swimming",
+        "artistName": "Mac Miller",
+        "image": "",
+        "price": "$1,100"
+    },
+
+    {
+        "albumName": "The car ",
+        "artistName": "Arctic Monkeys",
+        "image": "",
+        "price": "$790"
+    },
+
+    {
+        "albumName": "Strangers in The Alps",
+        "artistName": "Phoebe Bridgers",
+        "image": "",
+        "price": "$775"
+    },
+
+    {
+        "albumName": "Endless Summer Vacation",
+        "artistName": "Miley Cyrus",
+        "image": "",
+        "price": "$890"
+    }
+]
+
