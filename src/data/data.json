@@ -99,6 +99,27 @@
         "artistName": "Beyoncé",
         "image": "",
         "price": "$1,427"
+    },
+
+    {
+        "albumName": "Chemtrails Over the Country Club",
+        "artistName": "Lana del Rey",
+        "image": "",
+        "price": "$1,250"
+    },
+
+    {
+        "albumName": "Dance Fever",
+        "artistName": "Florence + The Machine",
+        "image": "",
+        "price": "$1,000"
+    },
+
+    {
+        "albumName": "Voulez-Vous",
+        "artistName": "ABBA",
+        "image": "",
+        "price": "$750"
     }
 ]
 
