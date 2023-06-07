@@ -3,123 +3,141 @@
         "albumName": "Random Access Memories",
         "artistName": "Daft Punk",
         "image": "./src/assets/images/daft.png",
-        "price": "$1,290"
+        "price": "$1,290",
+        "id" : 1
     },
 
     {
         "albumName": "Swimming",
         "artistName": "Mac Miller",
         "image": "./src/assets/images/mac.png",
-        "price": "$1,100"
+        "price": "$1,100",
+        "id" : 2
     },
 
     {
         "albumName": "The car ",
         "artistName": "Arctic Monkeys",
         "image": "./src/assets/images/art.png",
-        "price": "$790"
+        "price": "$790",
+        "id" : 3
     },
 
     {
         "albumName": "Strangers in The Alps",
         "artistName": "Phoebe Bridgers",
         "image": "./src/assets/images/bridger.png",
-        "price": "$775"
+        "price": "$775",
+        "id" : 4
     },
 
     {
         "albumName": "Endless Summer Vacation",
         "artistName": "Miley Cyrus",
         "image": "./src/assets/images/mileyc.png",
-        "price": "$890"
+        "price": "$890",
+        "id" : 5
     },
 
     {
         "albumName": "Fearless (Taylor's version) Triple Vinil",
         "artistName": "Taylor Swift",
         "image": "./src/assets/images/tsgold.png",
-        "price": "$1,000"
+        "price": "$1,000",
+        "id" : 6
     },
     {
         "albumName": "Midnights",
         "artistName": "Taylor Swift",
         "image": "./src/assets/images/tslav.png",
-        "price": "$800"
+        "price": "$800",
+        "id" : 7
     },
     {
         "albumName": "Happier than Ever",
         "artistName": "Billie Eilish",
         "image": "./src/assets/images/billie.png",
-        "price": "$947"
+        "price": "$947",
+        "id" : 8
     },
 
     {
         "albumName": "Chromatica Vinil Trifold",
         "artistName": "Lady Gaga",
         "image": "./src/assets/images/chrom.png",
-        "price": "$,000"
+        "price": "$,000",
+        "id" : 9
     },
 
     {
         "albumName": "Dawn of Chromatica",
         "artistName": "Lady Gaga",
         "image": "./src/assets/images/dawnchrom.png",
-        "price": "$850"
+        "price": "$850",
+        "id" : 10
     },
 
     {
         "albumName": "Did You Know That There's a Tunnerl Under Ocean Boulvard",
         "artistName": "Lana del Rey",
         "image": "./src/assets/images/ldrocean.png",
-        "price": "$800"
+        "price": "$800",
+        "id" : 11
     },
 
     {
         "albumName": "Born Pink",
         "artistName": "Black Pink",
         "image": "./src/assets/images/blackpink.png",
-        "price": "$700"
+        "price": "$700",
+        "id" : 12
     },
 
     {
         "albumName": "Fine Line",
         "artistName": "Harry Styles",
         "image": "./src/assets/images/harrys.png",
-        "price": "$1,173"
+        "price": "$1,173",
+        "id" : 13
     },
     {
         "albumName": "Ultraviolence",
         "artistName": "Lana del Rey",
         "image": "./src/assets/images/ldrultra.png",
-        "price": "$1,123"
+        "price": "$1,123",
+        "id" : 14
     },
 
     {
         "albumName": "Renaissance",
         "artistName": "Beyoncé",
         "image": "./src/assets/images/beyonce.png",
-        "price": "$1,427"
+        "price": "$1,427",
+        "id" : 15
     },
 
     {
         "albumName": "Chemtrails Over the Country Club",
         "artistName": "Lana del Rey",
         "image": "./src/assets/images/ldrchem.png",
-        "price": "$1,250"
+        "price": "$1,250",
+        "id" : 16
     },
 
     {
         "albumName": "Dance Fever",
         "artistName": "Florence + The Machine",
         "image": "./src/assets/images/flormach.png",
-        "price": "$1,000"
+        "price": "$1,000",
+        "id" : 17
     },
 
     {
         "albumName": "Voulez-Vous",
         "artistName": "ABBA",
         "image": "./src/assets/images/abba.png",
-        "price": "$750"
+        "price": "$750",
+        "id" : 18
     }
 ]
 

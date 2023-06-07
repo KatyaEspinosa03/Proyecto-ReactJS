@@ -1,20 +1,19 @@
-import React, {useState, useEffect}from 'react'
-import Card from '../Card/Card';
+import React from 'react'
+import Card from '../Card/Card'
 
 
-const CardList = () => {
-const [cards, setCards] = useState([]);
+const CardList = ({cards}) => {
 
-console.log("cards", cards)
-useEffect(() => {
-    fetch("./src/data/data.json")
-    .then((response) => response.json())
-    .then ((data) => setCards(data));
-}, [])
 
 return (
-    <div>  hello
-        <Card />    
+    <div>  
+        {cards.map((card) => {
+            return (
+                <div key={card.id}>
+                    <Card card={card}/>
+                </div>
+            )
+        })} 
     </div>
 )
 }

@@ -1,15 +1,21 @@
 
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import CardList from '../CardList/CardList';
 
-const ItemListContainer = ({message}) => {
+
+const ItemListContainer = () => {
+
+    const [cards, setCards] = useState([]);
+
+console.log("cards", cards)
+useEffect(() => {
+    fetch("./src/data/data.json")
+    .then((response) => response.json())
+    .then ((data) => setCards(data));
+}, [])
+
     return (
-    <section className='container'>
-        <div className='row'>
-            <div className="col-md-12 text-center mensaje">
-                {message}
-            </div>
-        </div>
-    </section>
+    <div>  <CardList cards={cards}/> </div>
     )
 }
 
