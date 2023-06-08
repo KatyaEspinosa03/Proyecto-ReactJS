@@ -51,31 +51,42 @@ body {
 }
 
 .card-list{
-    display: grid;
+   display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
-    .card{
-    width: 200px;
-    background-color: $hoverColor;
-    height: 500px;
-    margin: 5%;
+    .card-group{
+            height: 100%;
 
-    .card-body{
+        .card{
+            background-color: $hoverColor;
         .card-title{
             font-family: "Garet-heavy";
-            color: $textColor
-        };
-
+            color:$textColor;
+            font-size: 150%;
+        }
         .card-text{
             font-family: "Garet";
+            margin: 0%;
+            font-size: 120%;
         }
+        }
+    
+        .card-footer{
+            .button{
 
-        .btn{
-            background-color: $textColor;
-            color: $hoverColor;
+                .btn{
+                    background-color: $textColor;
+                    color: $hoverColor;
+                    text-align: center;
+                }
+
+                h5{
+                    display: flex;
+                    align-self: end;
+                    font-family: "Garet";
+                }
+            } 
         }
     }
-    }
-
 
 }

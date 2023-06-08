@@ -65,7 +65,7 @@
         "albumName": "Chromatica Vinil Trifold",
         "artistName": "Lady Gaga",
         "image": "./src/assets/images/chrom.png",
-        "price": "$,000",
+        "price": "$1,000",
         "id" : 9
     },
 
