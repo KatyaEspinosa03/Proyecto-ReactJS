@@ -18,7 +18,7 @@
     {
         "albumName": "The car ",
         "artistName": "Arctic Monkeys",
-        "image": "./src/assets/images/art.png",
+        "image": "./src/assets/images/artcar.png.webp",
         "price": "$790",
         "id" : 3
     },

@@ -9,9 +9,11 @@ body {
 .navbar{
     border-top: solid $hoverColor 2px ;
     border-bottom: solid $hoverColor 2px ;
+    background-color: $backgroundColor;
 
 
     .nav{
+
         .nav-link {
             color: $textColor;
             font-size: 130%;
@@ -46,4 +48,34 @@ body {
     font-size: 140%;
     padding: 5%;
     text-decoration: underline 4px $textColor;
+}
+
+.card-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .card{
+    width: 200px;
+    background-color: $hoverColor;
+    height: 500px;
+    margin: 5%;
+
+    .card-body{
+        .card-title{
+            font-family: "Garet-heavy";
+            color: $textColor
+        };
+
+        .card-text{
+            font-family: "Garet";
+        }
+
+        .btn{
+            background-color: $textColor;
+            color: $hoverColor;
+        }
+    }
+    }
+
+
 }

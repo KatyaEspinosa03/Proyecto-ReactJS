@@ -6,10 +6,10 @@ const CardList = ({cards}) => {
 
 
 return (
-    <div>  
+    <div className='card-list'>  
         {cards.map((card) => {
             return (
-                <div key={card.id}>
+                <div  key={card.id}>
                     <Card card={card}/>
                 </div>
             )

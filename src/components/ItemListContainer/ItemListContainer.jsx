@@ -15,7 +15,9 @@ useEffect(() => {
 }, [])
 
     return (
-    <div>  <CardList cards={cards}/> </div>
+    <div>  
+        <CardList cards={cards}/> 
+    </div>
     )
 }
 
