@@ -1,7 +1,21 @@
 
-import React from 'react'
+import React,{useState} from 'react'
 
 export const Card = ({card}) => {
+
+const [counter, setCounter] = useState(1);
+
+const addOn = () => {
+  if (counter < card.stock){
+  setCounter(counter + 1);
+  } 
+}
+
+const substract = () => {
+  if (counter != 1){
+  setCounter(counter - 1);
+  }
+}
   return (
 
 
@@ -16,13 +30,13 @@ export const Card = ({card}) => {
     <div className='card-footer'>
       <div className='row button'>
         <div className='col justify-content-center'>
-        <button type="button" className="btn">+</button>
+        <button onClick={addOn} type="button" className="btn">+</button>
         </div>
         <div className='col justify-content-center'>
-        <h5 className="card-title"> 1 </h5>
+        <h5 className="card-title"> {counter} </h5>
         </div>
         <div className='col justify-content-center'>
-        <button type="button" className="btn">-</button>
+        <button onClick={substract} type="button" className="btn">-</button>
         </div>
 
       </div>

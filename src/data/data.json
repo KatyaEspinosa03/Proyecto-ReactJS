@@ -4,7 +4,8 @@
         "artistName": "Daft Punk",
         "image": "./src/assets/images/daft.png",
         "price": "$1,290",
-        "id" : 1
+        "id" : 1,
+        "stock": 10
     },
 
     {
@@ -12,7 +13,8 @@
         "artistName": "Mac Miller",
         "image": "./src/assets/images/mac.png",
         "price": "$1,100",
-        "id" : 2
+        "id" : 2,
+        "stock": 14
     },
 
     {
@@ -28,7 +30,8 @@
         "artistName": "Phoebe Bridgers",
         "image": "./src/assets/images/bridger.png",
         "price": "$775",
-        "id" : 4
+        "id" : 4,
+        "stock": 6
     },
 
     {
@@ -36,7 +39,8 @@
         "artistName": "Miley Cyrus",
         "image": "./src/assets/images/mileyc.png",
         "price": "$890",
-        "id" : 5
+        "id" : 5,
+        "stock": 3
     },
 
     {
@@ -44,21 +48,24 @@
         "artistName": "Taylor Swift",
         "image": "./src/assets/images/tsgold.png",
         "price": "$1,000",
-        "id" : 6
+        "id" : 6,
+        "stock": 20
     },
     {
         "albumName": "Midnights",
         "artistName": "Taylor Swift",
         "image": "./src/assets/images/tslav.png",
         "price": "$800",
-        "id" : 7
+        "id" : 7,
+        "stock": 25
     },
     {
         "albumName": "Happier than Ever",
         "artistName": "Billie Eilish",
         "image": "./src/assets/images/billie.png",
         "price": "$947",
-        "id" : 8
+        "id" : 8,
+        "stock": 6
     },
 
     {
@@ -66,7 +73,8 @@
         "artistName": "Lady Gaga",
         "image": "./src/assets/images/chrom.png",
         "price": "$1,000",
-        "id" : 9
+        "id" : 9,
+        "stock": 10
     },
 
     {
@@ -74,7 +82,8 @@
         "artistName": "Lady Gaga",
         "image": "./src/assets/images/dawnchrom.png",
         "price": "$850",
-        "id" : 10
+        "id" : 10,
+        "stock": 3
     },
 
     {
@@ -82,7 +91,8 @@
         "artistName": "Lana del Rey",
         "image": "./src/assets/images/ldrocean.png",
         "price": "$800",
-        "id" : 11
+        "id" : 11,
+        "stock": 4
     },
 
     {
@@ -90,7 +100,8 @@
         "artistName": "Black Pink",
         "image": "./src/assets/images/blackpink.png",
         "price": "$700",
-        "id" : 12
+        "id" : 12,
+        "stock": 25
     },
 
     {
@@ -98,14 +109,16 @@
         "artistName": "Harry Styles",
         "image": "./src/assets/images/harrys.png",
         "price": "$1,173",
-        "id" : 13
+        "id" : 13,
+        "stock": 17
     },
     {
         "albumName": "Ultraviolence",
         "artistName": "Lana del Rey",
         "image": "./src/assets/images/ldrultra.png",
         "price": "$1,123",
-        "id" : 14
+        "id" : 14,
+        "stock": 10
     },
 
     {
@@ -113,7 +126,8 @@
         "artistName": "Beyoncé",
         "image": "./src/assets/images/beyonce.png",
         "price": "$1,427",
-        "id" : 15
+        "id" : 15,
+        "stock": 28
     },
 
     {
@@ -121,7 +135,8 @@
         "artistName": "Lana del Rey",
         "image": "./src/assets/images/ldrchem.png",
         "price": "$1,250",
-        "id" : 16
+        "id" : 16,
+        "stock": 10
     },
 
     {
@@ -129,7 +144,8 @@
         "artistName": "Florence + The Machine",
         "image": "./src/assets/images/flormach.png",
         "price": "$1,000",
-        "id" : 17
+        "id" : 17,
+        "stock": 5
     },
 
     {
@@ -137,7 +153,8 @@
         "artistName": "ABBA",
         "image": "./src/assets/images/abba.png",
         "price": "$750",
-        "id" : 18
+        "id" : 18,
+        "stock": 20
     }
 ]
 
