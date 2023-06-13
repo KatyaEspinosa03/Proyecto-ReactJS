@@ -1,28 +1,30 @@
 import React from 'react';
 import CarWidget from '../CarWidget/CarWidget'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 const NavBar = () => {
 
     return (
-<nav className="navbar sticky-top"> 
-    <div className="container justify-content-center">
-        <ul className="nav">
-            <li className="nav-item">
-                <a className="nav-link" href="#"> Inicio </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#"> Vinilos </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#"> Sobre nosotros </a>
-            </li>
-        </ul>
+<Navbar className="navbar sticky-top"> 
+    <Container className="justify-content-center nav">
+            <Nav.Link href="#home" className='nav nav-link'>Inicio</Nav.Link>
+            <NavDropdown title="Artistas" id="basic-nav-dropdown" className='dropdown' >
+                <div className='dropdown-item'>
+              <NavDropdown.Item href="#action/3.1">Bandas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2"> Solistas </NavDropdown.Item>
+              </div>
+            </NavDropdown>
+            <Nav.Link href="#link" className='nav nav-link'>Sobre nosotros</Nav.Link>
             <div>
         <CarWidget />
             </div>
-    </div>
-</nav>
+    </Container>
+</Navbar>
+
     )
 }
 

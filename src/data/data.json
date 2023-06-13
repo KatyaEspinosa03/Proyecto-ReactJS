@@ -5,7 +5,8 @@
         "image": "./src/assets/images/daft.png",
         "price": "$1,290",
         "id" : 1,
-        "stock": 10
+        "stock": 10,
+        "type": "band"
     },
 
     {
@@ -14,7 +15,8 @@
         "image": "./src/assets/images/mac.png",
         "price": "$1,100",
         "id" : 2,
-        "stock": 14
+        "stock": 14,
+        "type": "singer"
     },
 
     {
@@ -22,7 +24,8 @@
         "artistName": "Arctic Monkeys",
         "image": "./src/assets/images/artcar.png.webp",
         "price": "$790",
-        "id" : 3
+        "id" : 3,
+        "type": "band"
     },
 
     {
@@ -31,7 +34,8 @@
         "image": "./src/assets/images/bridger.png",
         "price": "$775",
         "id" : 4,
-        "stock": 6
+        "stock": 6,
+        "type": "singer"
     },
 
     {
@@ -40,7 +44,8 @@
         "image": "./src/assets/images/mileyc.png",
         "price": "$890",
         "id" : 5,
-        "stock": 3
+        "stock": 3,
+        "type": "singer"
     },
 
     {
@@ -49,7 +54,8 @@
         "image": "./src/assets/images/tsgold.png",
         "price": "$1,000",
         "id" : 6,
-        "stock": 20
+        "stock": 20,
+        "type": "singer"
     },
     {
         "albumName": "Midnights",
@@ -57,7 +63,8 @@
         "image": "./src/assets/images/tslav.png",
         "price": "$800",
         "id" : 7,
-        "stock": 25
+        "stock": 25,
+        "type": "singer"
     },
     {
         "albumName": "Happier than Ever",
@@ -65,7 +72,8 @@
         "image": "./src/assets/images/billie.png",
         "price": "$947",
         "id" : 8,
-        "stock": 6
+        "stock": 6,
+        "type": "singer"
     },
 
     {
@@ -74,7 +82,8 @@
         "image": "./src/assets/images/chrom.png",
         "price": "$1,000",
         "id" : 9,
-        "stock": 10
+        "stock": 10,
+        "type": "singer"
     },
 
     {
@@ -83,7 +92,8 @@
         "image": "./src/assets/images/dawnchrom.png",
         "price": "$850",
         "id" : 10,
-        "stock": 3
+        "stock": 3,
+        "type": "singer"
     },
 
     {
@@ -92,7 +102,8 @@
         "image": "./src/assets/images/ldrocean.png",
         "price": "$800",
         "id" : 11,
-        "stock": 4
+        "stock": 4,
+        "type": "singer"
     },
 
     {
@@ -101,7 +112,8 @@
         "image": "./src/assets/images/blackpink.png",
         "price": "$700",
         "id" : 12,
-        "stock": 25
+        "stock": 25,
+        "type": "band"
     },
 
     {
@@ -110,7 +122,8 @@
         "image": "./src/assets/images/harrys.png",
         "price": "$1,173",
         "id" : 13,
-        "stock": 17
+        "stock": 17,
+        "type": "singer"
     },
     {
         "albumName": "Ultraviolence",
@@ -118,7 +131,8 @@
         "image": "./src/assets/images/ldrultra.png",
         "price": "$1,123",
         "id" : 14,
-        "stock": 10
+        "stock": 10,
+        "type": "singer"
     },
 
     {
@@ -127,7 +141,8 @@
         "image": "./src/assets/images/beyonce.png",
         "price": "$1,427",
         "id" : 15,
-        "stock": 28
+        "stock": 28,
+        "type": "singer"
     },
 
     {
@@ -136,7 +151,8 @@
         "image": "./src/assets/images/ldrchem.png",
         "price": "$1,250",
         "id" : 16,
-        "stock": 10
+        "stock": 10,
+        "type": "singer"
     },
 
     {
@@ -145,7 +161,8 @@
         "image": "./src/assets/images/flormach.png",
         "price": "$1,000",
         "id" : 17,
-        "stock": 5
+        "stock": 5,
+        "type": "band"
     },
 
     {
@@ -154,7 +171,8 @@
         "image": "./src/assets/images/abba.png",
         "price": "$750",
         "id" : 18,
-        "stock": 20
+        "stock": 20,
+        "type": "band"
     }
 ]
 

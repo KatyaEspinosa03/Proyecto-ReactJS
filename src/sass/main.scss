@@ -26,8 +26,27 @@ body {
                 transform: scale(1.2,1.2);
             }
         }
+        
+.dropdown{
+
+    .dropdown-menu{
+        background-color: $hoverColor;
+    .dropdown-item{
+                background-color: $hoverColor;
+                font-family: "Garet";
+                color: $textColor;
+                transition: 2.5s;
+
+                &:hover{
+                    color:$backgroundColor;
+                    font-family: "Garet-heavy";
+                }
+
+            }
+        }
     
     }
+}
 }
 .car{
     color: $textColor;
