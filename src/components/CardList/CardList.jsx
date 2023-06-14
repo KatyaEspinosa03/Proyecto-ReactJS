@@ -7,13 +7,12 @@ const CardList = ({cards}) => {
 
 
 return (
-    <div className='card-list'>  
+    <div className='card-list details'>  
         {cards.map((card) => {
             return (
                 <div  key={card.id}>
-                    <Link to={`detail/${card.id}`} className="link-details">
+                
                     <Card card={card}/>
-                    </Link>
                 </div>
             )
         })} 

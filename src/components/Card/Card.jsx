@@ -1,5 +1,6 @@
 
 import React,{useState} from 'react'
+import {Link} from "react-router-dom";
 
 export const Card = ({card}) => {
 
@@ -21,10 +22,14 @@ const substract = () => {
 
 <div className='card-group'>
     <div className='card'>
+    <Link to={`detail/${card.id}`} className="link-details">
       <img className="card-img-top" src={card.image} alt="Card image cap" />
+      </Link>
       <div className='card-body'>
+      <Link to={`detail/${card.id}`} className="link-details">
         <h5 className='card-title'>{card.albumName}</h5>
         <p className='card-text'> {card.artistName} </p>
+        </Link>
         <p className='card-text'> {card.price} </p>
       </div>
     <div className='card-footer'>
