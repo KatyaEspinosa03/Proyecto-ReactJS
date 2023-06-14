@@ -11,14 +11,14 @@ const NavBar = () => {
     return (
 <Navbar className="navbar sticky-top"> 
     <Container className="justify-content-center nav">
-            <Nav.Link href="#home" className='nav nav-link'>Inicio</Nav.Link>
+            <Nav.Link href="/" className='nav nav-link'>Inicio</Nav.Link>
             <NavDropdown title="Artistas" id="basic-nav-dropdown" className='dropdown' >
                 <div className='dropdown-item'>
               <NavDropdown.Item href="#action/3.1">Bandas</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2"> Solistas </NavDropdown.Item>
               </div>
             </NavDropdown>
-            <Nav.Link href="#link" className='nav nav-link'>Sobre nosotros</Nav.Link>
+            <Nav.Link href="/about" className='nav nav-link'>Sobre nosotros</Nav.Link>
             <div>
         <CarWidget />
             </div>

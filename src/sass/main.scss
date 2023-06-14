@@ -6,6 +6,7 @@ body {
     background-color: $backgroundColor;
 }
 
+
 .navbar{
     border-top: solid $hoverColor 2px ;
     border-bottom: solid $hoverColor 2px ;
@@ -72,6 +73,11 @@ body {
 .card-list{
    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .link-details{
+        text-decoration: none;
+    }
+
 
     .card-group{
             height: 100%;
