@@ -4,7 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
 import {NavLink} from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 const NavBar = () => {
 
@@ -19,11 +21,21 @@ const NavBar = () => {
               </div>
             </NavDropdown>
             <Nav.Link as={NavLink} to="/about" className='nav nav-link'>Sobre nosotros</Nav.Link>
+            <Form className="d-flex form">
+            <Form.Control
+              type="search"
+              placeholder="Busca por artista"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success" className='custom-btn'>Search</Button>
+          </Form>
             <div>
         <CarWidget />
             </div>
     </Container>
 </Navbar>
+
 
     )
 }

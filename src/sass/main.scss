@@ -49,6 +49,18 @@ body {
     }
 }
 }
+.form{
+    .custom-btn{
+       color: $hoverColor !important;
+       border: $hoverColor !important;
+
+       &:hover{
+        background-color: $hoverColor;
+        color: $backgroundColor !important;
+       }
+    }
+}
+
 .car{
     color: $textColor;
     display: flex;
