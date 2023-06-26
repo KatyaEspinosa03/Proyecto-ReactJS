@@ -11,6 +11,7 @@ import HomePage from './pages/Home/HomePage';
 import AboutPage from './pages/About/AboutPage';
 import DetailPage from './pages/DetailPage/DetailPage';
 import Category from './pages/Category/Category';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/category/:categoryId" element={<Category />} />
+        <Route path="/artist/:search" element={<ItemListContainer />} />
       </Routes>
     </div>
     </Router>

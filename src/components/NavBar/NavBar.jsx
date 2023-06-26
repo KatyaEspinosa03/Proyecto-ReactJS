@@ -5,19 +5,20 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 
 const NavBar = () => {
 
     const [value,setValue] = useState("");
-    const [userData, setUserData] = useState({});
 
-    console.log(userData)
+    const navigate = useNavigate();
 
     const handleOnChange = (e) => {
         setValue(e.target.value);
+        
     }
+
 const handleOnSubmit = (e) => {
     e.preventDefault()
 
@@ -27,20 +28,11 @@ const handleOnSubmit = (e) => {
     })
     .join(' ');
 
-   console.log(userInput)
+    navigate(`/artist/${userInput}`)
 
-   // hago la llamada al json y pido que lo encuentre de acuerdo a la propiedad de artistName
-   fetch("./data.json")
-   .then((response) => response.json())
-   .then ((data) => {
-    const foundItems = data.filter((item) => item.artistName === userInput);
-    if (foundItems.length > 0){
-        setUserData(foundItems);
-    }else{
-        console.log("Item not found");
-    }
-   })
-   .catch((error) => console.error(error));
+    setValue("")
+
+   console.log(userInput)
 }
     return (
 <Navbar className="navbar sticky-top"> 
