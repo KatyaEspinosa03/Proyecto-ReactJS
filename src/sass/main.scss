@@ -51,8 +51,10 @@ body {
 }
 .form{
     .custom-btn{
-       color: $hoverColor !important;
+       color: $textColor !important;
        border: $hoverColor !important;
+       font-size: 130%;
+        font-family: "Garet";
 
        &:hover{
         background-color: $hoverColor;

@@ -99,7 +99,7 @@
 
     {
         "albumName": "Did You Know That There's a Tunnerl Under Ocean Boulvard",
-        "artistName": "Lana del Rey",
+        "artistName": "Lana Del Rey",
         "image": "../src/assets/images/ldrocean.png",
         "price": "$800",
         "id" : 11,
@@ -128,7 +128,7 @@
     },
     {
         "albumName": "Ultraviolence",
-        "artistName": "Lana del Rey",
+        "artistName": "Lana Del Rey",
         "image": "../src/assets/images/ldrultra.png",
         "price": "$1,123",
         "id" : 14,
@@ -148,7 +148,7 @@
 
     {
         "albumName": "Chemtrails Over the Country Club",
-        "artistName": "Lana del Rey",
+        "artistName": "Lana Del Rey",
         "image": "../src/assets/images/ldrchem.png",
         "price": "$1,250",
         "id" : 16,
@@ -158,7 +158,7 @@
 
     {
         "albumName": "Dance Fever",
-        "artistName": "Florence + The Machine",
+        "artistName": "Florence And The Machine",
         "image": "../src/assets/images/flormach.png",
         "price": "$1,000",
         "id" : 17,
