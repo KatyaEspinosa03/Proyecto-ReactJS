@@ -6,12 +6,16 @@ export const Card = ({card}) => {
 
 const [counter, setCounter] = useState(1);
 
+// funcion para poder sumar la cantidad de producto 
+// si no hay más stock no permite seguir sumando
 const addOn = () => {
   if (counter < card.stock){
   setCounter(counter + 1);
   } 
 }
 
+//funcion para bajar la cantidad de producto
+// si la cantidad es 1 no puede seguir bajando
 const substract = () => {
   if (counter != 1){
   setCounter(counter - 1);
@@ -19,7 +23,7 @@ const substract = () => {
 }
   return (
 
-
+// plantilla de la tarjeta
 <div className='card-group'>
     <div className='card'>
     <Link to={`detail/${card.id}`} className="link-details">
