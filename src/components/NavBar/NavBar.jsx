@@ -27,7 +27,6 @@ const handleOnSubmit = (e) => {
       return word.charAt(0).toUpperCase() + word.slice(1);
     })
     .join(' ');
-
     // utilizo navigate para ser redireccionado a otra ruta para mostrar las tarjetas generadas
     navigate(`/artist/${userInput}`)
     // Retomo setValue para regresarlo a vacio cuando el usuario de click en buscar 
@@ -57,7 +56,8 @@ const handleOnSubmit = (e) => {
             />
             <Button variant="outline-success" 
             className='custom-btn' 
-            type="submit" >
+            type="submit"
+            disabled ={!value} >
                 Buscar
             </Button>
           </Form>

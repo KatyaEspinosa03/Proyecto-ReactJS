@@ -47,8 +47,10 @@ const substract = () => {
         <div className='col justify-content-center'>
         <button onClick={substract} type="button" className="btn">-</button>
         </div>
-
-      </div>
+    </div>
+    <div className='row button justify-content-center'>
+    <button type="button" className="btn cart-btn"> Agregar al carrito </button>
+    </div>
 
     </div>
   </div>
