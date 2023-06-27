@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import {NavLink, useNavigate} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import { Dropdown } from 'react-bootstrap';
 
 const NavBar = () => {
 
@@ -61,9 +62,16 @@ const handleOnSubmit = (e) => {
                 Buscar
             </Button>
           </Form>
-            <div>
-        <CarWidget />
-            </div>
+          <Dropdown alignright="true">
+            <Dropdown.Toggle  className='cart-dropdwn'>
+              <div>
+              <CarWidget />
+              </div>
+            </Dropdown.Toggle>
+            <Dropdown.Menu className='dropdown-menu'>
+              <span> El carrito está vacío </span>
+            </Dropdown.Menu>
+          </Dropdown>
     </Container>
 </Navbar>
 

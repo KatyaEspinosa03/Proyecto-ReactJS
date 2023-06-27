@@ -1,12 +1,13 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './sass/main.scss';
+import  { CartProvider } from './components/Cartcontext/CartContext'
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 import NavBar from './components/NavBar/NavBar';
 import Header from './components/Header/Header';
-
+import Cart from './components/Cart/Cart';
 import HomePage from './pages/Home/HomePage';
 import AboutPage from './pages/About/AboutPage';
 import DetailPage from './pages/DetailPage/DetailPage';
@@ -15,10 +16,12 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 
 
+
 function App() {
 
 
   return (
+    <CartProvider>
     <Router>
     <div>
       <Header />
@@ -29,9 +32,11 @@ function App() {
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/category/:categoryId" element={<Category />} />
         <Route path="/artist/:search" element={<ItemListContainer />} />
+        <Route path= "/cart" element={<Cart />} />
       </Routes>
     </div>
     </Router>
+    </CartProvider>
   )
 }
 

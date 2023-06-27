@@ -10,8 +10,6 @@ const ItemListContainer = () => {
 
     const { search }= useParams();
 
-console.log("cards", cards)
-
 // recupero la información del json
 useEffect(() => {
     fetch("/data.json")
@@ -34,7 +32,7 @@ useEffect(() => {
 }, [search])
 
     return (
-    <div>  
+    <div> 
         <CardList cards={cards}/> 
     </div>
     )

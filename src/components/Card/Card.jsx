@@ -1,8 +1,12 @@
 
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import {Link} from "react-router-dom";
+import {CartContext} from '../Cartcontext/CartContext'
+
 
 export const Card = ({card}) => {
+
+const {addToCart} = useContext(CartContext);
 
 const [counter, setCounter] = useState(1);
 
@@ -21,6 +25,13 @@ const substract = () => {
   setCounter(counter - 1);
   }
 }
+
+const handleAddToCart = () => {
+  addToCart(card, counter);
+}
+
+//funcion para agregar productos al carrito
+
   return (
 
 // plantilla de la tarjeta
@@ -49,7 +60,7 @@ const substract = () => {
         </div>
     </div>
     <div className='row button justify-content-center'>
-    <button type="button" className="btn cart-btn"> Agregar al carrito </button>
+    <button type="button" className="btn cart-btn" onClick={handleAddToCart}> Agregar al carrito </button>
     </div>
 
     </div>

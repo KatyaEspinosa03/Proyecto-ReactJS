@@ -63,6 +63,14 @@ body {
     }
 }
 
+.cart-dropdwn{
+    background-color: $backgroundColor !important;
+    padding: 1%;
+    border: solid 1px $textColor !important;
+    
+
+}
+
 .car{
     color: $textColor;
     display: flex;
@@ -73,6 +81,9 @@ body {
 
     &:hover {
         color:$hoverColor;
+    }
+     .bagde{
+        background-color: $backgroundColor !important;
     }
     }
 
@@ -141,7 +152,7 @@ body {
                 transition: 1s;
                 
                 &:hover{
-                    background-color: #37303a;
+                    background-color: rgb(183, 93, 105,0.7);;
                 }
                 }
             } 
