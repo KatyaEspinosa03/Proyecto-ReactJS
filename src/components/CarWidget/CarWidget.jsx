@@ -6,7 +6,7 @@ import {CartContext} from '../Cartcontext/CartContext'
 const CarWidget = () => {
 const { cartItems } = useContext(CartContext);
 
-const totalQuantity = cartItems.length;
+const totalQuantity = cartItems.reduce((acc, prod)=> acc += prod.quantity, 0);
 
     return (
         <div className="car">

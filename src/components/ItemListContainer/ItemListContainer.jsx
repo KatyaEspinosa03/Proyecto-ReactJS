@@ -1,7 +1,9 @@
 
 import React, {useState, useEffect} from 'react'
 import CardList from '../CardList/CardList';
-import {useParams} from 'react-router-dom'
+import {useParams, useNavigate} from 'react-router-dom'
+
+
 
 
 const ItemListContainer = () => {
@@ -9,7 +11,8 @@ const ItemListContainer = () => {
     const [cards, setCards] = useState([]);
 
     const { search }= useParams();
-
+    
+    const navigate = useNavigate();
 // recupero la información del json
 useEffect(() => {
     fetch("/data.json")
@@ -22,7 +25,8 @@ useEffect(() => {
             if (foundItems.length > 0){
                 setCards(foundItems)
             } else{
-                console.log("item not found")
+                navigate("/notFound")
+                
             }
             // si no se llama a search entonces se generan todas las tarjetas
         } else{

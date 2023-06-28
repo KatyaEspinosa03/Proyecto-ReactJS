@@ -170,3 +170,15 @@ body {
     pointer-events: none;}
     
 }
+
+.error-page{
+    color: $textColor;
+    width: 45%;
+    margin: 2%;
+    text-align: justify;
+    font-family: "Garet-heavy";
+    margin-left: 28%;
+    background-color: $hoverColor;
+    border-radius: 10px;
+    height: 120px;
+}

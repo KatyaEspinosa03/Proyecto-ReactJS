@@ -13,6 +13,7 @@ import AboutPage from './pages/About/AboutPage';
 import DetailPage from './pages/DetailPage/DetailPage';
 import Category from './pages/Category/Category';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Error from './components/Error/Error';
 
 
 
@@ -32,7 +33,9 @@ function App() {
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/category/:categoryId" element={<Category />} />
         <Route path="/artist/:search" element={<ItemListContainer />} />
+        <Route path="/notFound" element={<Error />} />
         <Route path= "/cart" element={<Cart />} />
+        
       </Routes>
     </div>
     </Router>

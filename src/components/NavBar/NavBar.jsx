@@ -33,7 +33,7 @@ const handleOnSubmit = (e) => {
     // Retomo setValue para regresarlo a vacio cuando el usuario de click en buscar 
     setValue("")
 
-   console.log(userInput)
+console.log(userInput)
 }
     return (
 <Navbar className="navbar sticky-top"> 
