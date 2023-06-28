@@ -6,8 +6,10 @@ import { Dropdown, Container } from 'react-bootstrap';
 import {BsTrash3} from 'react-icons/bs'
 
 
+
 const CarWidget = ({cartItemsData}) => {
 const { cartItems } = useContext(CartContext);
+
 
 const totalQuantity = cartItems.reduce((acc, prod)=> acc += prod.quantity, 0);
 

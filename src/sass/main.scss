@@ -32,11 +32,12 @@ body {
 
     .dropdown-menu{
         background-color: $backgroundColor;
-        overflow-y: scroll;
-        height: 500px;
+        overflow-y: auto;
+        max-height: 500px;
 
          .cart-text{
-                    color: $hoverColor;
+            color: $hoverColor;
+
             }
 
         .cart-item{
