@@ -13,7 +13,7 @@ import AboutPage from './pages/About/AboutPage';
 import DetailPage from './pages/DetailPage/DetailPage';
 import Category from './pages/Category/Category';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Error from './components/Error/Error';
+import Error from './pages/Error/Error';
 
 
 

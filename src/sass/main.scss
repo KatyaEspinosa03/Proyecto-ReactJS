@@ -31,7 +31,28 @@ body {
 .dropdown{
 
     .dropdown-menu{
-        background-color: $hoverColor;
+        background-color: $backgroundColor;
+        overflow-y: scroll;
+        height: 500px;
+
+         .cart-text{
+                    color: $hoverColor;
+            }
+
+        .cart-item{
+            background-color: $hoverColor;
+            color: $textColor;
+            margin: 2%;
+            .cart-title{
+                font-family: "Garet-heavy";
+                color: $textColor;
+            }
+
+            .cart-btn{
+                background-color: $textColor;
+                margin-top: 5%;
+            }
+        }
     .dropdown-item{
                 background-color: $hoverColor;
                 font-family: "Garet";

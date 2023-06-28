@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import CarWidget from '../CarWidget/CarWidget'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,8 +8,13 @@ import Form from 'react-bootstrap/Form';
 import {NavLink, useNavigate} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import { Dropdown } from 'react-bootstrap';
+import { CartContext } from '../Cartcontext/CartContext';
+
+
 
 const NavBar = () => {
+
+    const { cartItemsData } = useContext(CartContext);
 
     const [value,setValue] = useState("");
 
@@ -65,12 +70,9 @@ console.log(userInput)
           <Dropdown alignright="true">
             <Dropdown.Toggle  className='cart-dropdwn'>
               <div>
-              <CarWidget />
+              <CarWidget cartItemsData={cartItemsData} />
               </div>
             </Dropdown.Toggle>
-            <Dropdown.Menu className='dropdown-menu'>
-              <span> El carrito está vacío </span>
-            </Dropdown.Menu>
           </Dropdown>
     </Container>
 </Navbar>
