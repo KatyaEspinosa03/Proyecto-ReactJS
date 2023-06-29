@@ -6,8 +6,6 @@ export const CartProvider = ({ children }) => {
 
     const [cartItems, setCartItems] = useState([]);
 
-    const [cartItemsData, setCartItemsData] = useState([]);
-
     const [totalQuantity, setTotalQuantity] = useState(0)
 
     const addToCart = (product, quantity) => {
@@ -24,20 +22,11 @@ export const CartProvider = ({ children }) => {
         setCartItems(updatedCart);
       }
 
-      const itemData = {
-        artist: product.artistName,
-        album: product.albumName,
-        image: product.image,
-        price: product.price,
-      };
-      setCartItemsData([...cartItemsData, itemData])
     };
 
     const removeFromCart = (productId) => {
       const updatedCart = cartItems.filter((item) => item.product.id !== productId);
       setCartItems(updatedCart)
-      const updatedCartitemsData = cartItemsData.filter((item)=> item.productId !== productId);
-      setCartItemsData(updatedCartitemsData);
     }
 
     useEffect(() => {
@@ -50,7 +39,7 @@ export const CartProvider = ({ children }) => {
 
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, cartItemsData, setCartItemsData, removeFromCart, totalQuantity}}>
+        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, totalQuantity}}>
           {children}
         </CartContext.Provider>
       );

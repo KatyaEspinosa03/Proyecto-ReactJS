@@ -14,7 +14,7 @@ import { CartContext } from '../Cartcontext/CartContext';
 
 const NavBar = () => {
 
-    const { cartItemsData } = useContext(CartContext);
+    const { cartItems } = useContext(CartContext);
 
     const [value,setValue] = useState("");
 
@@ -70,7 +70,7 @@ console.log(userInput)
           <Dropdown alignright="true">
             <Dropdown.Toggle  className='cart-dropdwn'>
               <div>
-              <CarWidget cartItemsData={cartItemsData} />
+              <CarWidget cartItems={cartItems} />
               </div>
             </Dropdown.Toggle>
           </Dropdown>
