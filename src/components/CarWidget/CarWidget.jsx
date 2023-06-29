@@ -8,13 +8,10 @@ import {BsTrash3} from 'react-icons/bs'
 
 
 const CarWidget = ({cartItemsData}) => {
-const { cartItems } = useContext(CartContext);
-
-
-const totalQuantity = cartItems.reduce((acc, prod)=> acc += prod.quantity, 0);
+const { removeFromCart, totalQuantity } = useContext(CartContext);
 
     return (
-        <div className="car">
+        <div className="cart">
             <ShoppingCartIcon />
             <Badge className="bagde">{totalQuantity}</Badge>
             <Dropdown.Menu className='dropdown-menu'>
@@ -22,20 +19,13 @@ const totalQuantity = cartItems.reduce((acc, prod)=> acc += prod.quantity, 0);
                 (
                      <span className="cart-text"> El carrito está vacío </span>
                 ) : (
-                    cartItemsData.map((item, index) => (
-                        <Container>
-                        <span key={index}>
+                    cartItemsData.map((item) => (
+                        <Container  key={item.id}>
+                        <span>
                             <Card className="cart-item">
                             <Card.Img className="col-md-4" src={item.image} alt={item.artist}/>
-                            <Card.Body className="col-md-8">
-                            <Card.Title className="cart-title">{item.artist}</Card.Title>
-                            <Card.Subtitle>{item.album}</Card.Subtitle>
-                            <Card.Subtitle>{item.price}</Card.Subtitle>
-                            <Button className="cart-btn"> <BsTrash3/> </Button>
-                            </Card.Body>
-
+                            <Button className="cart-btn" onClick={() => removeFromCart(item.id)}> <BsTrash3/> </Button>
                             </Card>
-                             
                         </span>
                         </Container>
                     ))

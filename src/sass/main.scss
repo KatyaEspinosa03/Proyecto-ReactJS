@@ -29,12 +29,10 @@ body {
         }
         
 .dropdown{
-
     .dropdown-menu{
         background-color: $backgroundColor;
         overflow-y: auto;
         max-height: 500px;
-
          .cart-text{
             color: $hoverColor;
 
@@ -44,30 +42,27 @@ body {
             background-color: $hoverColor;
             color: $textColor;
             margin: 2%;
-            .cart-title{
-                font-family: "Garet-heavy";
-                color: $textColor;
-            }
 
             .cart-btn{
                 background-color: $textColor;
-                margin-top: 5%;
+                margin-top: 2%;
+                margin-bottom: 2%;
             }
         }
     .dropdown-item{
-                background-color: $hoverColor;
                 font-family: "Garet";
                 color: $textColor;
                 transition: 2.5s;
-
+                font-size: 130;
                 &:hover{
-                    color:$backgroundColor;
                     font-family: "Garet-heavy";
+                    background-color: $backgroundColor;
                 }
-
+            .dropdown-item.active{
+                background-color: transparent !important;
+            }
             }
         }
-    
     }
 }
 }
@@ -93,7 +88,7 @@ body {
 
 }
 
-.car{
+.cart{
     color: $textColor;
     display: flex;
     flex-direction: row;
@@ -109,20 +104,10 @@ body {
     }
     }
 
-.mensaje {
-    color:$hoverColor;
-    font-family: "Garet-heavy";
-    font-size: 140%;
-    padding: 5%;
-    text-decoration: underline 4px $textColor;
-}
 
 .card-list{
    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-
-
 
     .link-details{
         text-decoration: none;
@@ -188,9 +173,6 @@ body {
 
     display: flex;
     justify-content: center;
-        .img{
-    pointer-events: none;}
-    
 }
 
 .error-page{
@@ -203,4 +185,5 @@ body {
     background-color: $hoverColor;
     border-radius: 10px;
     height: 120px;
+    font-size: 120%;
 }
