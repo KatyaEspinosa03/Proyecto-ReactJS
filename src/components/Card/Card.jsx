@@ -47,9 +47,9 @@ const handleAddToCart = () => {
         </Link>
         <p className='card-text'> {card.price} </p>
       </div>
-    <div className='card-footer'>
+    <div className='card-footer text-center'>
       <div className='row button'>
-        <div className='col justify-content-center'>
+        <div className='col'>
         <button onClick={addOn} type="button" className="btn">+</button>
         </div>
         <div className='col justify-content-center'>

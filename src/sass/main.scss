@@ -199,3 +199,18 @@ body {
     background-color: $textColor !important;
     width: 90%;
 }
+
+.cart-page{
+    color: $textColor;
+    background-color: $hoverColor;
+    padding: 2%;
+    margin-top: 2%;
+    font-family: "Garet";
+
+   .title{
+    font-family: "Garet-heavy";
+   }
+    .cart-btn{
+       background-color: $textColor;
+    }
+}

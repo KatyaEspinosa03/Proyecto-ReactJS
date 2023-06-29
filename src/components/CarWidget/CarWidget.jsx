@@ -20,9 +20,10 @@ const { removeFromCart, totalQuantity } = useContext(CartContext);
             <Dropdown.Menu className='dropdown-menu text-center'>
                 {cartItems.length === 0 ? 
                 (
-                     <span className="cart-text"> El carrito está vacío </span>
+                    <span className="cart-text"> El carrito está vacío </span>
                 ) : (
-                    cartItems.map((item) => (
+                    <>
+                    {cartItems.map((item) => (
                         <Container  key={item.product.id}>
                         <span>
                             <Card className="cart-item">
@@ -31,13 +32,15 @@ const { removeFromCart, totalQuantity } = useContext(CartContext);
                             </Card>
                         </span>
                         </Container>
-                    ))
-                )}
-                  <span>
+                    ))}
+                    <span>
                     <Link to="/cart">
                  <Button className="go-cart-btn "> Ver Carrito </Button>
                      </Link>
                     </span>
+
+                    </>
+                )}
             </Dropdown.Menu>
         </div>
     );
