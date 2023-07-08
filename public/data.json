@@ -5,8 +5,8 @@
         "image": "../src/assets/images/daft.png",
         "price": "$1,290",
         "id" : 1,
-        "stock": 10,
-        "category": "band"
+        "sock": 10,
+        "ctategory": "band"
     },
 
     {

@@ -9,8 +9,7 @@ const Error = () => {
     <Container fluid className='error-page d-flex justify-content-center'>
     <Row>
       <Col className='col-sm-12 my-auto'> Lo sentimos, parece que no tenemos 
-      el producto que estás buscando. intenta con buscando otro producto
-      o revisa que esté escrito correctamente. 😌
+      el producto que estás buscando. 
     </Col>
     </Row>
   </Container>

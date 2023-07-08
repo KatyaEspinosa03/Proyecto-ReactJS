@@ -2,6 +2,9 @@
 import React, {useState, useEffect} from 'react'
 import CardList from '../CardList/CardList';
 import {useParams, useNavigate} from 'react-router-dom'
+import {db} from "../../Firebase/firebase"
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { DonutLarge, Foundation } from '@mui/icons-material';
 
 
 
@@ -13,27 +16,33 @@ const ItemListContainer = () => {
     const { search }= useParams();
     
     const navigate = useNavigate();
-// recupero la información del json
+
+// recupero la información del firebase
 useEffect(() => {
-    fetch("/data.json")
-    .then((response) => response.json())
-    .then ((data) => {
-        // condicional para saber si search se llamo, si es asi se hace un filtro para encontrar el producto de acuerdo al nombre
+    const getCards = async () => {
+        const q = query(collection(db, "products"));
+        const docs = [];
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach((doc) => {
+            docs.push({...doc.data(), id: doc.id})
+        })
+// si se hace uso de el buscador filtro los productos y si coincide la busqueda con 
+// el nombre del producto se muestran esas tarjetas, sino manda a la página de error
+// y si no se hace uso del buscador se muestran todas las tarjetas
         if(search){
-            const foundItems = data.filter((item) => item.artistName === search);
-            // si los resultados encontrados fueron más de cero se generan las tarjetas
+            const foundItems = docs.filter((item) => item.artistName === search);
             if (foundItems.length > 0){
                 setCards(foundItems)
-            } else{
+            } else {
                 navigate("/notFound")
-                
             }
-            // si no se llama a search entonces se generan todas las tarjetas
-        } else{
-            setCards(data)
-        }
-    });
+        } else{setCards(docs)}
+        
+    };
+    getCards();
 }, [search])
+
 
     return (
     <div> 
