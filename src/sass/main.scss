@@ -108,11 +108,9 @@ body {
 
     }
 
-
 .card-list{
-   display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
     .link-details{
         text-decoration: none;
         color: $textColor;
@@ -176,9 +174,11 @@ body {
 
 .card-detail{
     @extend .card-list;
-
     display: flex;
     justify-content: center;
+    width: 200%;
+    margin-left: 30% !important;
+
 }
 
 .error-page{

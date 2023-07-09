@@ -4,10 +4,6 @@ import CardList from '../CardList/CardList';
 import {useParams, useNavigate} from 'react-router-dom'
 import {db} from "../../Firebase/firebase"
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { DonutLarge, Foundation } from '@mui/icons-material';
-
-
-
 
 const ItemListContainer = () => {
 
