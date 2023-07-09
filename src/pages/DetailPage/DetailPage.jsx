@@ -33,7 +33,7 @@ const DetailPage = () => {
 
     
   return (
-    <div className='card-detail mx-auto'>
+    <div className='card-detail'>
     <div>
       <CardList cards={card} />
     </div>
