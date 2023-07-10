@@ -13,16 +13,26 @@ import { CartContext } from '../Cartcontext/CartContext';
 const FormModal = () => {
 
     const [show, setShow] = useState(false);
-    const [purchaseId, setPurchaseId] = useState()
-    const handleClose = () => setShow(false);
+    const [purchaseId, setPurchaseId] = useState(null)
+    const [alertShown, setAlertShown] = useState(false)
+ 
+    const { removeAllItems } = useContext(CartContext);
+
+    const handleClose = () => {
+      setShow(false)
+      if (alertShown) {
+        removeAllItems();
+      }
+    };
     const handleShow = () => setShow(true);
 
-    const { removeAllItems } = useContext(CartContext);
+
 
   const initialState = {
     firstName: "",
     lastName: "",
-    email: ""
+    email: "",
+    number: " "
   };
 
 
@@ -31,7 +41,16 @@ const FormModal = () => {
 
   const handleOnChange = (e) => {
     const { value, name } = e.target
-    setValues({...values, [name]: value});
+
+    // validación para que el usuario solo pueda ingresar letras en el nombre y apellido
+    if (name === "firstName" || name === "lastName") {
+      const lettersVerified = /^[A-Za-z- ]+$/;
+      if (value === "" || value.match(lettersVerified)) {
+        setValues({...values, [name]: value});
+      }
+    } else {
+      setValues({...values, [name]: value});
+    }
   }
 
   const onSubmit =  async (e) => {
@@ -41,8 +60,9 @@ const FormModal = () => {
     {values,
     });
     setPurchaseId(docRef.id);
-    setValues(initialState);
-    removeAllItems();
+    setValues(initialState)
+    setAlertShown(true);
+/*     removeAllItems(); */
   };
 
   return (
@@ -74,7 +94,7 @@ const FormModal = () => {
         value={values.email}
         onChange={handleOnChange} />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput" label="Nombre">
+      <FloatingLabel controlId="floatingInput" label="Nombre(s)">
         <Form.Control 
         type="text" 
         placeholder="name" 
@@ -82,7 +102,7 @@ const FormModal = () => {
         value={values.firstName}
         onChange={handleOnChange} />
       </FloatingLabel>
-      <FloatingLabel controlId="floatingInput" label="Apellido">
+      <FloatingLabel controlId="floatingInput" label="Apellido(s)">
         <Form.Control 
         type="text" 
         placeholder="lastName" 
@@ -90,22 +110,25 @@ const FormModal = () => {
         value={values.lastName}
         onChange={handleOnChange} />
       </FloatingLabel>
+      <FloatingLabel controlId="floatingInput" label="Número de teléfono">
+        <Form.Control 
+        type="number" 
+        placeholder="number" 
+        name="number"
+        value={values.number}
+        onChange={handleOnChange} />
+         </FloatingLabel>
       <Modal.Footer>
         <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>
         <Button style={{ backgroundColor: 'rgb(183, 93, 105)' }} type="submit"> Realizar compra </Button>
+        {purchaseId ? <MessageSuccess purchaseId={purchaseId} /> : null}
       </Modal.Footer>
       </Form>
       </Modal.Body>
-
-      {purchaseId ? (
-          <Modal.Footer>
-            <MessageSuccess purchaseId={purchaseId} />
-          </Modal.Footer>
-        ): null}
-
     </Modal>
+
   </>
   )
 }
