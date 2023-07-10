@@ -44,11 +44,12 @@ body {
             margin: 2%;
 
             .cart-btn{
-                background-color: $textColor;
+                background-color: $textColor !important;
                 margin-top: 2%;
                 margin-bottom: 2%;
                 margin-left: 30%;
                 width: 40%;
+                border: none;
             }
 
         }
@@ -150,6 +151,7 @@ body {
                     background-color: $textColor;
                     color: $hoverColor;
                     text-align: center;
+                    border: none;
                 }
 
                 h5{
@@ -196,6 +198,7 @@ body {
 .go-cart-btn{
     background-color: $textColor !important;
     width: 90%;
+    border: none;
 }
 
 .cart-page{
@@ -209,6 +212,12 @@ body {
     font-family: "Garet-heavy";
    }
     .cart-btn{
-       background-color: $textColor;
+       background-color: $textColor !important;
+       border: none;
     }
+}
+
+.alert{
+    background-color: $hoverColor !important;
+    border: none;
 }

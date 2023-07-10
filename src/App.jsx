@@ -18,6 +18,7 @@ import CartPage from './pages/CartPage/CartPage'
 
 
 
+
 function App() {
 
 
@@ -35,7 +36,6 @@ function App() {
         <Route path="/artist/:search" element={<ItemListContainer />} />
         <Route path="/notFound" element={<Error />} />
         <Route path= "/cart" element={<CartPage />} />
-        
       </Routes>
     </div>
     </Router>

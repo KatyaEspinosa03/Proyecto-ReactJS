@@ -6,10 +6,13 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { Button } from 'react-bootstrap';
 import {BsTrash3} from 'react-icons/bs'
+import FormModal from '../../components/FormModal/formModal';
+
 
 const CartPage = () => {
 
   const {cartItems, totalQuantity, removeFromCart} = useContext(CartContext);
+
 
   const removeSymbols = (price) => {
     return parseFloat(price.replace(/\$|,/g, ""));
@@ -17,12 +20,14 @@ const CartPage = () => {
 
   const calculateTotalAmount = () => {
     let total = 0
-    cartItems.forEach((item) => {
+    cartItems.forEach((item) => { 
       const itemTotal = item.quantity * removeSymbols(item.product.price);
       total += itemTotal
     })
     return total;
   }
+
+
 
   return (
     <Container className='cart-page'>
@@ -55,6 +60,13 @@ const CartPage = () => {
               <Col xs={8}/>
               <Col xs={4} className="text-end">
                 <h4 className='title'> Total = {calculateTotalAmount()}</h4>
+              </Col>
+          </Row>
+
+          <Row className='mt-3'>
+              <Col xs={8}/>
+              <Col xs={4} className="text-end">
+                <FormModal />
               </Col>
           </Row>
         </div>

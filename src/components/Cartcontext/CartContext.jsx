@@ -29,6 +29,11 @@ export const CartProvider = ({ children }) => {
       setCartItems(updatedCart)
     }
 
+    const removeAllItems = () => {
+      setCartItems([]);
+      setTotalQuantity(0);
+    };
+
     useEffect(() => {
       const calculateTotalQuantity = () =>{
         const quantity = cartItems.reduce((acc, prod) => acc += prod.quantity, 0);
@@ -39,7 +44,7 @@ export const CartProvider = ({ children }) => {
 
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, totalQuantity}}>
+        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, totalQuantity, removeAllItems}}>
           {children}
         </CartContext.Provider>
       );
