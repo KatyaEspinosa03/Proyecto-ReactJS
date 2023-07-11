@@ -7,6 +7,7 @@ import Image from 'react-bootstrap/Image';
 import { Button } from 'react-bootstrap';
 import {BsTrash3} from 'react-icons/bs'
 import FormModal from '../../components/FormModal/formModal';
+import { toast } from 'react-toastify';
 
 
 const CartPage = () => {
@@ -52,7 +53,8 @@ const CartPage = () => {
                 <h5> Total = {item.quantity * removeSymbols(item.product.price)}</h5>
               </Col>
               <Col xs={2}>
-              <Button className="cart-btn" onClick={() => removeFromCart(item.product.id)}> <BsTrash3/> </Button>
+              <Button className="cart-btn" onClick={() => {removeFromCart(item.product.id)
+              toast("El producto se eliminó del carrito")}}> <BsTrash3/> </Button>
               </Col>
             </Row>
           ))}

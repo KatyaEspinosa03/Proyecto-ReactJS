@@ -5,6 +5,7 @@ import {CartContext} from '../Cartcontext/CartContext'
 import { Dropdown, Container } from 'react-bootstrap';
 import {BsTrash3} from 'react-icons/bs'
 import {Link} from 'react-router-dom';
+import {toast} from "react-toastify"
 
 
 
@@ -28,7 +29,10 @@ const { removeFromCart, totalQuantity } = useContext(CartContext);
                         <span>
                             <Card className="cart-item">
                             <Card.Img className="col-md-4" src={item.product.image} alt={item.product.artist}/>
-                            <Button className="cart-btn" onClick={() => removeFromCart(item.product.id)}> <BsTrash3/> </Button>
+                            <Button className="cart-btn" 
+                            onClick={() => 
+                            {removeFromCart(item.product.id)
+                            toast("El producto se eliminó del carrito")}}> <BsTrash3/> </Button>
                             </Card>
                         </span>
                         </Container>

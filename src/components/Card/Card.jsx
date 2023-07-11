@@ -2,6 +2,7 @@
 import React,{useState, useContext} from 'react'
 import {Link} from "react-router-dom";
 import {CartContext} from '../Cartcontext/CartContext'
+import {toast} from "react-toastify"
 
 
 export const Card = ({card}) => {
@@ -28,6 +29,8 @@ const substract = () => {
 
 const handleAddToCart = () => {
   addToCart(card, counter);
+  toast("El producto se agregó al carrito")
+
 }
 
 //funcion para agregar productos al carrito
