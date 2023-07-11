@@ -7,6 +7,7 @@ import { collection, addDoc } from "firebase/firestore";
 import {db} from "../../Firebase/firebase"
 import MessageSuccess from '../MessageSuccess/MessageSuccess';
 import { CartContext } from '../Cartcontext/CartContext';
+import { ConstructionOutlined } from '@mui/icons-material';
 
 
 
@@ -32,7 +33,8 @@ const FormModal = () => {
     firstName: "",
     lastName: "",
     email: "",
-    number: " "
+    confirmEmail: "",
+    number: ""
   };
 
 
@@ -53,17 +55,26 @@ const FormModal = () => {
     }
   }
 
+
   const onSubmit =  async (e) => {
     e.preventDefault()
-    
-    const docRef = await addDoc(collection(db, "ordersCollection"),
-    {values,
-    });
-    setPurchaseId(docRef.id);
-    setValues(initialState)
-    setAlertShown(true);
+
+    const {email, confirmEmail} = initialState
+    if(value.email !== value.confirmEmail) {
+      console.log("no coinciden")
+    } else{
+      const docRef = await addDoc(collection(db, "ordersCollection"),
+      {values,
+      });
+      setPurchaseId(docRef.id);
+      setValues(initialState)
+      setAlertShown(true);
+    };
+   
 /*     removeAllItems(); */
   };
+
+
 
   return (
     <>
@@ -75,56 +86,76 @@ const FormModal = () => {
       show={show}
       onHide={handleClose}
       backdrop="static"
-      keyboard={false}
-    >
+      keyboard={false}>
+
       <Modal.Header closeButton>
         <Modal.Title> Finaliza tu compra</Modal.Title>
       </Modal.Header>
       <Modal.Body>
+
     <Form onSubmit={onSubmit}>
+
       <FloatingLabel
         controlId="floatingInput"
         label="Correo Electrónico"
-        className="mb-3"
-      >
+        className="mb-3">
         <Form.Control 
         type="email" 
         placeholder="name@example.com" 
         name="email"
         value={values.email}
-        onChange={handleOnChange} />
+        onChange={handleOnChange} 
+        required={true}/>
       </FloatingLabel>
+
+      <FloatingLabel
+        controlId='floatingInput'
+        label="confirma tu correo electrónico"
+        className='mb-3'>
+        <Form.Control 
+        type='email'
+        placeholder='confirmEmail'
+        name="confirmEmail"
+        value={values.confirmEmail}
+        onChange={handleOnChange}
+        required={true}/>
+      </FloatingLabel>
+
       <FloatingLabel controlId="floatingInput" label="Nombre(s)">
         <Form.Control 
         type="text" 
         placeholder="name" 
         name="firstName"
         value={values.firstName}
-        onChange={handleOnChange} />
+        onChange={handleOnChange}
+        required={true} />
       </FloatingLabel>
+
       <FloatingLabel controlId="floatingInput" label="Apellido(s)">
         <Form.Control 
         type="text" 
         placeholder="lastName" 
         name="lastName"
         value={values.lastName}
-        onChange={handleOnChange} />
+        onChange={handleOnChange} 
+        required={true}/>
       </FloatingLabel>
+
       <FloatingLabel controlId="floatingInput" label="Número de teléfono">
         <Form.Control 
         type="number" 
         placeholder="number" 
         name="number"
         value={values.number}
-        onChange={handleOnChange} />
-         </FloatingLabel>
+        onChange={handleOnChange} 
+        required={true}/>
+        </FloatingLabel>
+
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
-          Close
-        </Button>
         <Button style={{ backgroundColor: 'rgb(183, 93, 105)' }} type="submit"> Realizar compra </Button>
         {purchaseId ? <MessageSuccess purchaseId={purchaseId} /> : null}
       </Modal.Footer>
+
       </Form>
       </Modal.Body>
     </Modal>
