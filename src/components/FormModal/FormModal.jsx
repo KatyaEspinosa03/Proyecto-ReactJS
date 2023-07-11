@@ -58,19 +58,13 @@ const FormModal = () => {
 
   const onSubmit =  async (e) => {
     e.preventDefault()
-
-    const {email, confirmEmail} = initialState
-    if(value.email !== value.confirmEmail) {
-      console.log("no coinciden")
-    } else{
       const docRef = await addDoc(collection(db, "ordersCollection"),
       {values,
       });
       setPurchaseId(docRef.id);
       setValues(initialState)
       setAlertShown(true);
-    };
-   
+
 /*     removeAllItems(); */
   };
 
@@ -117,6 +111,7 @@ const FormModal = () => {
         placeholder='confirmEmail'
         name="confirmEmail"
         value={values.confirmEmail}
+        pattern={values.email}
         onChange={handleOnChange}
         required={true}/>
       </FloatingLabel>
