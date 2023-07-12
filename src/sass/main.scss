@@ -174,13 +174,59 @@ body {
 
 }
 
-.card-detail{
-    @extend .card-list;
-    display: flex;
-    justify-content: center;
-    width: 200%;
-}
+// .card-detail{
+//     @extend .card-list;
+//     display: flex;
+//     justify-content: center;
+//     width: 200%;
+// }
 
+.detailPage{
+    background-color: $hoverColor;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    width: 90%;
+    margin-left: 5%;
+
+
+    .image{
+        margin-top: 2%;
+    }
+
+    .title{
+        margin-top: 10%;
+        margin-left: 1%;
+        font-family: "Garet-heavy";
+        color: $textColor;
+    }
+
+    .description{
+        margin-top: 10%;
+        font-family: "Garet";
+        text-align: justify;
+        color: $textColor;
+    }
+
+    .detail-btn{
+        background-color: $textColor;
+        border: none !important;
+        color: $hoverColor;
+    }
+
+    .last-btn{
+        background-color: $textColor;
+        border-radius: 10px;
+        margin-bottom: 10%;
+        text-align: center;
+        width: 85%;
+        transition: 1s;
+                
+                &:hover{
+                    background-color: rgb(183, 93, 105,0.7);;
+                }
+    }
+
+}
 .error-page{
     color: $textColor;
     width: 45%;
@@ -214,6 +260,7 @@ body {
     .cart-btn{
        background-color: $textColor !important;
        border: none;
+       
     }
 }
 

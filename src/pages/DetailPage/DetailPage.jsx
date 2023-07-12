@@ -3,12 +3,11 @@ import {useParams} from "react-router-dom"
 import { collection, query, where, getDocs, documentId } from "firebase/firestore";
 import { db } from '../../Firebase/firebase';
 
-import CardList from '../../components/CardList/CardList';
-
+import DetailList from '../../components/DetailList/DetailList';
 
 const DetailPage = () => {
 
-    const[card, setCard] = useState([]) 
+    const[card, setCard] = useState([]);
 
     let { id } = useParams();
 
@@ -33,12 +32,12 @@ const DetailPage = () => {
 
     
   return (
-    <div className='card-detail'>
-    <div>
-      <CardList cards={card} />
+
+    <div className='detailPage'>
+      <DetailList card={card} />
     </div>
 
-        </div>
+
   )
 }
 

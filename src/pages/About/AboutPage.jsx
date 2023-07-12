@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 const AboutPage = () => {
   return (
-    <Container className='cart-page' style={{margin:"5%", width:"85%"}}>
+    <Container className='cart-page' style={{marginBottom:"2%"}}>
       <Row>
         <Col className='text-center' style={{fontFamily:"Garet-heavy"}}>
         <h1> ¡Bienvenido a Vinil World!</h1>

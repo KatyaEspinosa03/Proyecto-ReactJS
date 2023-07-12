@@ -17,7 +17,7 @@ const FormModal = () => {
     const [purchaseId, setPurchaseId] = useState(null)
     const [alertShown, setAlertShown] = useState(false)
  
-    const { removeAllItems } = useContext(CartContext);
+    const { cartItems, removeAllItems } = useContext(CartContext);
 
     const handleClose = () => {
       setShow(false)
@@ -59,8 +59,7 @@ const FormModal = () => {
   const onSubmit =  async (e) => {
     e.preventDefault()
       const docRef = await addDoc(collection(db, "ordersCollection"),
-      {values,
-      });
+      {values, cartItems});
       setPurchaseId(docRef.id);
       setValues(initialState)
       setAlertShown(true);
@@ -104,7 +103,7 @@ const FormModal = () => {
 
       <FloatingLabel
         controlId='floatingInput'
-        label="confirma tu correo electrónico"
+        label="Confirma tu correo electrónico"
         className='mb-3'>
         <Form.Control 
         type='email'
