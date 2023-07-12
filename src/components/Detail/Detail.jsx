@@ -44,7 +44,7 @@ const Detail = ({card}) => {
             <h4 > {card.price} </h4>
         </Col>
         <Col xs={4} className="description">
-            <h4> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati ipsum labore quibusdam expedita. Dicta vel sapiente molestias earum! Incidunt voluptas id laboriosam deleniti modi qui architecto exercitationem cum magni sed.</h4>
+            <h4> {card.description}</h4>
         </Col>
     </Row>
     <Row className='mt-3'>
