@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import CardList from '../CardList/CardList';
 import {useParams, useNavigate} from 'react-router-dom'
 import {db} from "../../Firebase/firebase"
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
 
