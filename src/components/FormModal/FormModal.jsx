@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
-import { collection, addDoc } from "firebase/firestore"; 
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"; 
 import {db} from "../../Firebase/firebase"
 import MessageSuccess from '../MessageSuccess/MessageSuccess';
 import { CartContext } from '../Cartcontext/CartContext';
@@ -55,16 +55,15 @@ const FormModal = () => {
     }
   }
 
-
+  
   const onSubmit =  async (e) => {
     e.preventDefault()
+    const getTime = serverTimestamp();
       const docRef = await addDoc(collection(db, "ordersCollection"),
-      {values, cartItems});
+      {values, cartItems,getTime});
       setPurchaseId(docRef.id);
       setValues(initialState)
       setAlertShown(true);
-
-/*     removeAllItems(); */
   };
 
 
